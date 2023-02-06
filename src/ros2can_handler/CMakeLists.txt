@@ -11,9 +11,10 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
+find_package(can_msg_frame REQUIRED)
 
 add_executable(ros2can_handler src/ros2can_handler.cpp)
-ament_target_dependencies(ros2can_handler rclcpp example_interfaces)
+ament_target_dependencies(ros2can_handler rclcpp example_interfaces can_msg_frame)
 
 install(TARGETS
   ros2can_handler
